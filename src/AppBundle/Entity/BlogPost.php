@@ -40,7 +40,7 @@ class BlogPost
      *
      * @ORM\Column(name="draft", type="boolean")
      */
-    private $draft;
+    private $draft = false;
 
 
     /**
@@ -123,6 +123,22 @@ class BlogPost
     public function getDraft()
     {
         return $this->draft;
+    }
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="blogPosts")
+     */
+    private $category;
+
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
 
