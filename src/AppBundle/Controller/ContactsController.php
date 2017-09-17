@@ -25,10 +25,7 @@ class ContactsController extends Controller
             ->add('name', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-botton:15px')))
             ->add('mobile', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-botton:15px')))
             ->add('email', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-botton:15px')))
-//            ->add('category', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-botton:15px')))
             ->add('message', TextareaType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-botton:15px')))
-//            ->add('priority', ChoiceType::class, array('choices' => array('Low' => 'Low', 'Normal' => 'Normal', 'High' => 'High'), 'attr' => array('class' => 'form-control', 'style' => 'margin-botton:15px')))
-//            ->add('dueDate', DateTimeType::class, array('attr' => array('class' => 'formcontrol', 'style' => 'margin-botton:15px')))
             ->add('save', SubmitType::class, array('attr' => array('label' => 'Create Todo', 'class' => 'btn btn-primary', 'style' => 'margin-botton:15px')))
             ->GetForm();
 

@@ -32,6 +32,9 @@ framework:
     assets: ~
     php_errors:
         log: true
+    translator: { fallbacks: [en] }
+
+
 
 # Twig Configuration
 twig:
@@ -81,3 +84,12 @@ assetic:
         use_controller: '%kernel.debug%'
         filters:
             cssrewrite: ~
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        # ...
+
