@@ -35,7 +35,11 @@ class BlogPostAdmin extends AbstractAdmin
     {
         $datagridMapper->add('title')
             ->add('body')
-            ->add('draft');
+            ->add('draft')
+            ->add('category', null, array(), 'entity', array(
+                'class'    => 'AppBundle\Entity\Category',
+                'choice_label' => 'name', // In Symfony2: 'property' => 'name'
+            ));
 
     }
 
@@ -43,7 +47,8 @@ class BlogPostAdmin extends AbstractAdmin
     {
         $listMapper->addIdentifier('title')
         ->addIdentifier('body')
-        ->addIdentifier('draft');
+        ->addIdentifier('draft')
+            ->addIdentifier('category.name');
     }
 
     public function toString($object)
