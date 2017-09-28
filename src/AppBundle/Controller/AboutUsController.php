@@ -9,11 +9,11 @@ use Symfony\Component\HttpFoundation\Request;
 class AboutUsController extends Controller
 {
     /**
-     * @Route("/contacts", name="contacts")
+     * @Route("/about", name="about")
      */
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig');
+        return $this->render('about.html.twig');
     }
 }
