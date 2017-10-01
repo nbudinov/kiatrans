@@ -42,6 +42,12 @@ class BlogPost
      */
     private $draft = false;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="text")
+     */
+    private $image;
 
     /**
      * Get id
@@ -139,6 +145,19 @@ class BlogPost
     public function getCategory()
     {
         return $this->category;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        print_r($image);die;
+        $this->$image = $image;
+
+        return $this;
     }
 }
 

@@ -1,5 +1,6 @@
 /.web-server-pid
 /app/config/parameters.yml
+/app/config/parameters.yml.dist
 /build/
 /phpunit.xml
 /var/*
@@ -15,3 +16,4 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+/bower_components

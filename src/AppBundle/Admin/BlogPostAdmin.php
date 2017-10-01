@@ -14,6 +14,7 @@ class BlogPostAdmin extends AbstractAdmin
             ->with('Content', array('class' => 'col-md-9'))
             ->add('title', 'text')
             ->add('body', 'textarea')
+            ->add('image', 'file')
             ->end()
 
             ->with('Meta data' , array('class' => 'col-md-3'))
@@ -47,7 +48,7 @@ class BlogPostAdmin extends AbstractAdmin
     {
         $listMapper->addIdentifier('title')
         ->addIdentifier('body')
-        ->addIdentifier('draft')
+            ->addIdentifier('draft')
             ->addIdentifier('category.name');
     }
 
